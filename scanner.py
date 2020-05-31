@@ -17,14 +17,11 @@ def scan(start, finish):
     print('\rScanning completed')
 
 
-def print_help():
-    pass
-
-
 if __name__ == '__main__':
     if len(sys.argv) == 2:
         if sys.argv[1] in ['-h', '--help']:
-            print_help()
+            with open('help.txt', 'r', encoding='utf-8') as help_text:
+                print(help_text.read())
             exit(0)
         else:
             try:
